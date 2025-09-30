@@ -4,3 +4,4 @@ mammoth
 flask-cors
 pdfminer.six
 beautifulsoup4
+gunicorn
