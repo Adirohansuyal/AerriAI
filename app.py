@@ -1,18 +1,13 @@
 from flask import Flask, request, jsonify
 import requests
 from flask_cors import CORS
-from dotenv import load_dotenv
-import os
-
-# Load environment variables from .env file
-load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  # Enable CORS for all routes
 
-# Use environment variables
-API_KEY = os.getenv("GROQ_API_KEY")
-GROQ_API_URL = os.getenv("GROQ_API_URL")
+# Store the API key provided by the user
+API_KEY = "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"
+GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 @app.route('/api/data', methods=['POST'])
 def get_data():
