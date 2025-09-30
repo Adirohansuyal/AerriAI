@@ -1,0 +1,76 @@
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #e9ecef; /* Light gray background */
+    color: #343a40; /* Dark text for contrast */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    color: #0056b3; /* A slightly darker blue for headings */
+    font-weight: 600;
+}
+
+/* Custom styles for response area */
+#response {
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+}
+
+#userQuery {
+    background-color: #e0f7fa; /* Light cyan for user queries */
+    border-left: 4px solid #00bcd4;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+#aiResponse {
+    background-color: #e8f5e9; /* Light green for AI responses */
+    border-left: 4px solid #4caf50;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+}
+
+#aiResponse h1, #aiResponse h2, #aiResponse h3 {
+    color: #2e7d32; /* Darker green for AI response headings */
+}
+
+/* Enhancements for form elements and buttons (though Bootstrap handles most) */
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #218838;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2);
+}

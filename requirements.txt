@@ -1,0 +1,6 @@
+Flask
+requests
+mammoth
+flask-cors
+pdfminer.six
+beautifulsoup4
