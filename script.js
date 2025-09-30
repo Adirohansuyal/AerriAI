@@ -1,10 +1,6 @@
-import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
-
-// Use environment variables
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_KEY;
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
-
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'; 
+const SUPABASE_URL = "https://rbgtmuomzxuckhcejhpz.supabase.co"; 
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJiZ3RtdW9tenh1Y2toY2VqaHB6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkyNDM0MTUsImV4cCI6MjA3NDgxOTQxNX0.pSYbkSseP3eTRj0vKuO6jNYK2OL9siZ_qIZ7DqJVo-8"; const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // -------------------------------
 // DOM Elements
@@ -79,7 +75,7 @@ summarizeButton.addEventListener('click', async () => {
   aiResponseDiv.innerHTML = '<strong>AI is summarizing the webpage...</strong>';
 
   try {
-    const response = await fetch('http://127.0.0.1:5000/api/summarize_url', {
+    const response = await fetch('https://aerriai.onrender.com/summarize_url', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ url })
@@ -170,7 +166,7 @@ async function readFileContent(file) {
 }
 
 async function callLocalAPI(userQuestion, documentContent) {
-  const response = await fetch('http://127.0.0.1:5000/api/data', {
+  const response = await fetch('https://aerriai.onrender.com/api/data', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userQuestion, documentContent })
